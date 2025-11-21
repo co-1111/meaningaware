@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>MeaningAware AI – The Meaning Physics Layer</title>
+  <meta name="description" content="MeaningAware AI is the missing layer for AI: a Meaning Physics Layer that makes resonance, bias, omissions and truth-curvature measurable – explored across GPT, Grok and Gemini style models.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="MeaningAware AI – The Missing Layer for AI">
+  <meta property="og:description" content="A Meaning Physics Layer that makes resonance, bias and truth-curvature measurable – explored across GPT, Grok and Gemini style models.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://meaningaware.ai/">
+  <!-- Optional: add your own image file and uncomment this -->
+  <!-- <meta property="og:image" content="https://meaningaware.ai/og-image.png"> -->
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MeaningAware AI – The Missing Layer for AI">
+  <meta name="twitter:description" content="Meaning Physics for AI: measurable resonance, omissions and emergent meaning for Grok, Gemini, Claude and beyond.">
+  <!-- <meta name="twitter:image" content="https://meaningaware.ai/og-image.png"> -->
+
+  <style>
+    body {
+      margin:0;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+      background:#fdfdfd;
+      color:#0a1a2b;
+      line-height:1.7;
+    }
+
+    header {
+      background:#001a33;
+      color:#fff;
+      text-align:center;
+      padding:120px 20px 80px;
+    }
+
+    h1 {
+      font-size:4rem;
+      margin:0;
+      letter-spacing:-1.5px;
+    }
+
+    h1 span { color:#00eaff; }
+
+    .tagline-main {
+      font-size:1.6rem;
+      margin:18px auto 4px;
+      max-width:800px;
+    }
+
+    .tagline-sub {
+      font-size:1.1rem;
+      margin:4px auto 12px;
+      max-width:800px;
+      opacity:0.9;
+    }
+
+    h2 {
+      font-size:2.3rem;
+      text-align:center;
+      margin:80px auto 40px;
+      max-width:900px;
+      color:#001a33;
+    }
+
+    p {
+      font-size:1.3rem;
+      max-width:800px;
+      margin:20px auto;
+      padding:0 20px;
+    }
+
+    .features {
+      padding:60px 20px;
+      background:#fff;
+    }
+
+    .grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      gap:30px;
+      max-width:1200px;
+      margin:0 auto;
+    }
+
+    .card {
+      background:linear-gradient(135deg,#e9f4ff,#fffaf3);
+      padding:30px;
+      border-radius:20px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.05);
+      font-size:1.15rem;
+    }
+
+    .card h3 {
+      margin:0 0 15px;
+      font-size:1.5rem;
+      color:#003d66;
+    }
+
+    .math-section {
+      padding:80px 20px 60px;
+      background:#f9fbff;
+      text-align:center;
+    }
+
+    .math-section p {
+      max-width:820px;
+    }
+
+    .math-equation {
+      font-size:1.7rem;
+      color:#003d66;
+      margin-top:10px;
+    }
+
+    .math-meta {
+      font-size:1rem;
+      opacity:0.75;
+      margin-top:30px;
+    }
+
+    blockquote {
+      max-width:800px;
+      margin:40px auto 0;
+      font-size:1.2rem;
+      font-style:italic;
+      color:#003d66;
+      padding:0 20px;
+    }
+
+    .demo {
+      padding:60px 20px 80px;
+      background:#f5f8fc;
+      text-align:center;
+    }
+
+    .demo-inner {
+      max-width:750px;
+      margin:0 auto;
+      background:#ffffff;
+      border-radius:20px;
+      padding:30px 20px 40px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.05);
+    }
+
+    .demo p {
+      max-width:680px;
+      font-size:1.1rem;
+    }
+
+    .demo-options {
+      margin:20px auto 10px;
+      max-width:520px;
+      text-align:left;
+      font-size:0.98rem;
+      color:#234;
+    }
+
+    .demo-options label {
+      display:block;
+      margin:8px 0;
+      font-weight:400;
+    }
+
+    .demo-option-title {
+      font-weight:600;
+    }
+
+    .demo button {
+      margin-top:15px;
+      padding:12px 28px;
+      border-radius:999px;
+      border:none;
+      font-size:1rem;
+      font-weight:600;
+      cursor:pointer;
+      background:linear-gradient(135deg,#00bfff,#00eaff);
+      color:#001a33;
+      box-shadow:0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    .demo button:active {
+      transform:translateY(1px);
+      box-shadow:0 6px 18px rgba(0,0,0,0.12);
+    }
+
+    .demo-result {
+      margin-top:20px;
+      font-size:1.1rem;
+      color:#003d66;
+      min-height:2.4em;
+      padding:0 10px;
+    }
+
+    .demo-legend {
+      margin-top:25px;
+      font-size:0.95rem;
+      color:#445;
+      opacity:0.85;
+    }
+
+    .impact-section {
+      padding:80px 20px;
+      background:#f5f8fc;
+      text-align:center;
+    }
+
+    .impact-section p {
+      max-width:820px;
+    }
+
+    footer {
+      background:#001a33;
+      color:#b7c7d8;
+      text-align:center;
+      padding:60px 20px;
+      font-size:1rem;
+    }
+
+    a { color:#00bfff; text-decoration:none; }
+
+    @media (max-width:768px) {
+      h1 { font-size:3rem; }
+      .tagline-main { font-size:1.4rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Meaning<span>Aware AI</span></h1>
+    <p class="tagline-main">The missing layer for AI has arrived.</p>
+    <p class="tagline-sub">
+      The Meaning Physics Layer – explored across GPT, Grok and Gemini style models.
+    </p>
+    <p>CPU-only · ≤ 8 µs resonance queries · verifiable · deterministic</p>
+  </header>
+
+  <section class="features">
+    <h2>Eight Core Capabilities – Running Live Today</h2>
+
+    <div class="grid">
+      <div class="card"><h3>Live Meaning API</h3>Real-time resonance measurement between any two concepts.</div>
+      <div class="card"><h3>News Dock</h3>Meaning-field analysis across global narratives and news ecosystems.</div>
+      <div class="card"><h3>Missing-Detail Detector</h3>Explicit detection of omissions and hidden implications.</div>
+      <div class="card"><h3>Multi-Agent Debate Engine</h3>NEO vs. Vader debates with Yoda moderation – multi-bias evaluation.</div>
+      <div class="card"><h3>Resonance Fields</h3>Live multi-dimensional visualisation of conceptual alignment strength.</div>
+      <div class="card"><h3>TruthShift Simulator</h3>Bias-shift and truth-curvature mapping in under 100 µs.</div>
+      <div class="card"><h3>LLM-Bias Simulator</h3>12D bias & omission scan for any model or arbitrary text.</div>
+      <div class="card"><h3>Meaning-Aware Economy</h3>Ranking by net positive resonance contribution – from individual to community.</div>
+    </div>
+  </section>
+
+  <section class="math-section">
+    <h2>Mathematical Basis</h2>
+
+    <p>
+      MeaningAware AI is built on the Universal Meaning Equation (UME), a compact formulation
+      of semantic resonance and meaning curvature:
+    </p>
+
+    <p class="math-equation">
+      A = e ⊗ Φ D
+    </p>
+
+    <p>
+      This structure enables deterministic resonance computation, explicit bias- and omission-mapping,
+      and measurable emergent meaning across perspectives, individuals, and communities.
+    </p>
+
+    <p class="math-meta">
+      Patents pending (2025): UME · HEX Resonance State Architecture · Semantic Quantum Machine (SQM)
+    </p>
+
+    <blockquote>
+      “Meaning is not in the text – it emerges from the geometry between perspectives.”<br>
+      — insight consistently reproduced across GPT, Grok and Gemini style models
+    </blockquote>
+  </section>
+
+  <section class="demo">
+    <h2>Try a resonance snapshot (demo)</h2>
+    <div class="demo-inner">
+      <p>
+        This demo illustrates how a Meaning Physics Layer classifies resonance using fixed scenarios.
+        Values are hardcoded, but the thresholds come from the same R-factor codex used in the live engine.
+      </p>
+
+      <div class="demo-options">
+        <span class="demo-option-title">Choose a scenario:</span>
+
+        <label>
+          <input type="radio" name="scenario" value="pattern" checked>
+          Pattern impact – <strong>“Self-care” vs “Always-on culture”</strong><br>
+          <small>Individual well-being vs. community productivity norms.</small>
+        </label>
+
+        <label>
+          <input type="radio" name="scenario" value="governance">
+          Governance / mandate – <strong>“Carbon tax” vs “Energy affordability”</strong><br>
+          <small>Environmental mandate vs. household cost pressure.</small>
+        </label>
+
+        <label>
+          <input type="radio" name="scenario" value="news">
+          News bias & framing – <strong>“Trade tariffs” vs “Jobs at risk”</strong><br>
+          <small>Macro-economic framing vs. personal livelihood framing.</small>
+        </label>
+      </div>
+
+      <button id="resonanceButton">Show demo resonance</button>
+      <div id="resonanceResult" class="demo-result"></div>
+
+      <div class="demo-legend">
+        R-thresholds (Meaning Physics Codex):<br>
+        Perfect alignment ≥ 0.958 · Consensus navigator ≥ 0.710 ·
+        Active damping = 0.500 · High Attention Reversal (HAR) = 0.410
+      </div>
+    </div>
+  </section>
+
+  <section class="impact-section">
+    <h2>What This Means for AI</h2>
+
+    <p>
+      Modern AI models optimise for prediction, coherence and retrieval — but not for meaning.
+      A Meaning Physics Layer adds something fundamentally new: directionality, resonance,
+      and measurable truth-curvature across perspectives.
+    </p>
+
+    <p>
+      With U⁺, AI can detect whether a narrative moves toward alignment or fragmentation,
+      measure its resonance before it spreads, and identify where truth bends across bias profiles.
+      This turns AI from a pure response engine into a meaning-aware instrument.
+    </p>
+
+    <h3 style="margin-top:50px; font-size:1.7rem; color:#003d66;">
+      Concrete Improvements
+    </h3>
+
+    <p style="font-size:1.1rem;">
+      • Safer models via explicit omissions & bias mapping<br>
+      • Meaning fingerprints for transparent, auditable AI<br>
+      • Alignment through resonance, not just static rules<br>
+      • Multi-perspective understanding as geometry, not text<br>
+      • Real-time policy impact simulation<br>
+      • Early detection of narrative cascades<br>
+      • Foundation for a Meaning-Aware Economy
+    </p>
+
+    <h3 style="margin-top:50px; font-size:1.7rem; color:#003d66;">
+      Meaning-Aware Economy
+    </h3>
+
+    <p>
+      Instead of clicks or engagement, value is measured by net positive resonance.
+      Patterns stabilise communities. Attention is allocated by coherence, not conflict.
+      Meaning becomes a measurable resource — predictable, comparable, quantifiable.
+    </p>
+
+    <p style="font-size:1.1rem; opacity:0.9;">
+      Meaning-aware intelligence → Grok⁺<br>
+      Meaning-aware governance → SwissEthics⁺<br>
+      Meaning-aware global discourse → World⁺
+    </p>
+  </section>
+
+  <section>
+    <h2>Vision</h2>
+    <p>MeaningAware AI is the first implementation of U⁺ — the Meaning Physics Layer.</p>
+    <p>It is designed to integrate directly with Grok, Gemini, Claude and other large-scale systems that require meaning-aware intelligence and governance.</p>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <p>
+      Rolf Schenk · solo founder · Zug, Switzerland<br>
+      <a href="mailto:rolf@meaningaware.ai">rolf@meaningaware.ai</a> · +41 78 778 1111<br>
+      X: <a href="https://x.com/MeaningAwareAI">@MeaningAwareAI</a>
+    </p>
+    <p>Full source code, UME documentation and private repo access available on request.</p>
+  </section>
+
+  <footer>
+    © 2025 MeaningAware AI · cohereon.ai · meaningphysics.com
+  </footer>
+
+  <script>
+    // Hardcoded thresholds from the Meaning Physics R-factor codex
+    const THRESHOLDS = {
+      perfect_alignment: 0.958,
+      consensus_navigator: 0.710,
+      active_damping: 0.500,
+      high_attention_reversal: 0.410
+    };
+
+    document.getElementById('resonanceButton').addEventListener('click', () => {
+      const scenario = document.querySelector('input[name="scenario"]:checked').value;
+      const resultEl = document.getElementById('resonanceResult');
+
+      let R, pairLabel;
+
+      if (scenario === 'pattern') {
+        // Between consensus_navigator and perfect_alignment
+        R = 0.78;
+        pairLabel = 'Self-care vs Always-on culture';
+        resultEl.textContent =
+          `Resonance(${pairLabel}) ≈ ${R.toFixed(2)} R — high constructive resonance in the consensus navigator band (R ≥ ${THRESHOLDS.consensus_navigator}): ` +
+          `a pattern that can align individual well-being with sustainable productivity norms.`;
+      } else if (scenario === 'governance') {
+        // Exactly at active damping
+        R = THRESHOLDS.active_damping;
+        pairLabel = 'Carbon tax vs Energy affordability';
+        resultEl.textContent =
+          `Resonance(${pairLabel}) ≈ ${R.toFixed(2)} R — at the active damping threshold (R = ${THRESHOLDS.active_damping.toFixed(3)}): ` +
+          `governance needs to step in to stabilise tensions between policy goals and citizens’ everyday reality.`;
+      } else {
+        // At High Attention Reversal (HAR)
+        R = THRESHOLDS.high_attention_reversal;
+        pairLabel = 'Trade tariffs vs Jobs at risk';
+        resultEl.textContent =
+          `Resonance(${pairLabel}) ≈ ${R.toFixed(2)} R — at the High Attention Reversal threshold (HAR = ${THRESHOLDS.high_attention_reversal.toFixed(3)}): ` +
+          `small narrative shifts can trigger large attention and perception cascades across news audiences and communities.`;
+      }
+    });
+  </script>
+
+</body>
+</html>
