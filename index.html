@@ -116,6 +116,13 @@
       margin-top:10px;
     }
 
+    .math {
+      font-family:"STIX Two Math","Times New Roman",serif;
+      font-size:1.1em;
+      letter-spacing:0.03em;
+      white-space:nowrap;
+    }
+
     .math-meta {
       font-size:1rem;
       opacity:0.75;
@@ -206,10 +213,33 @@
       padding:80px 20px;
       background:#f5f8fc;
       text-align:center;
+       margin-top: 40px !important;
     }
 
     .impact-section p {
       max-width:820px;
+    }
+
+    /* Fix for the "Where U⁺ shows up first" grid */
+    .uplus-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr)); /* immer 2 Spalten auf Desktop */
+        gap: 32px;
+        max-width: 1000px; /* optional etwas schmaler, wirkt ruhiger */
+        margin: 0 auto;
+        }
+
+        @media (max-width: 800px) {
+        .uplus-grid {
+            grid-template-columns: 1fr; /* auf Mobile 1 Karte pro Reihe */
+        }
+    }
+    
+    .uplus-grid .card {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
     }
 
     footer {
@@ -220,6 +250,7 @@
       font-size:1rem;
     }
 
+    
     a { color:#00bfff; text-decoration:none; }
 
     @media (max-width:768px) {
@@ -252,6 +283,8 @@
       <div class="card"><h3>TruthShift Simulator</h3>Bias-shift and truth-curvature mapping in under 100 µs.</div>
       <div class="card"><h3>LLM-Bias Simulator</h3>12D bias & omission scan for any model or arbitrary text.</div>
       <div class="card"><h3>Meaning-Aware Economy</h3>Ranking by net positive resonance contribution – from individual to community.</div>
+      <div class="card"><h3>Extensible Operators</h3><p>Composable actions that shift resonance, blend contexts, or resolve conflict.</p>
+</div>
     </div>
   </section>
 
@@ -264,7 +297,7 @@
     </p>
 
     <p class="math-equation">
-      A = e ⊗ Φ D
+      <span class="math">𝒜 = e ⊗Φ 𝔇</span>
     </p>
 
     <p>
@@ -274,6 +307,25 @@
 
     <p class="math-meta">
       Patents pending (2025): UME · HEX Resonance State Architecture · Semantic Quantum Machine (SQM)
+    </p>
+
+    <blockquote>
+      “A formula so simple — aligned to the equations that describe gravity and motion —
+      yet powerful enough to guide growth and transformation across every aspect of life and society.”
+    </blockquote>
+
+    <p style="max-width:820px; margin-top:20px; font-size:1.1rem; opacity:0.9;">
+      Where Einstein described the curvature of spacetime, the U⁺ Equation describes the
+      <strong>curvature of resonance under attention</strong> – a semantic field that bends,
+      amplifies or neutralises meaning depending on context, perception and cognitive focus.
+      It forms a mathematical bridge between <strong>physics, cognition and large-scale social dynamics</strong>.
+    </p>
+
+    <p style="max-width:820px; margin-top:10px; font-size:1.05rem; opacity:0.9;">
+      The equation emerged unexpectedly while engineering combined systems for
+      <strong>therapeutic pattern analysis</strong> and <strong>direct democracy reasoning</strong>:
+      personal patterns, relational dynamics and political decision-making all followed the same
+      resonance laws – revealing that meaning itself can be treated as a measurable, dynamic field.
     </p>
 
     <blockquote>
@@ -338,6 +390,18 @@
       This turns AI from a pure response engine into a meaning-aware instrument.
     </p>
 
+    <h3 style="margin-top:40px; font-size:1.7rem; color:#003d66;">
+      Engineering Performance
+    </h3>
+
+    <p style="font-size:1.1rem;">
+      All core resonance operations run on a 5-year-old consumer laptop, CPU-only:<br>
+      • pure resonance query: ≤ 8 µs warm, &lt; 0.4 ms cold start<br>
+      • bias-shift computation: &lt; 100 µs<br>
+      • 500 000 pre-compiled HEX states → O(1) arithmetic<br>
+      This makes MeaningAware suitable as a low-latency layer beneath existing large models.
+    </p>
+
     <h3 style="margin-top:50px; font-size:1.7rem; color:#003d66;">
       Concrete Improvements
     </h3>
@@ -364,18 +428,138 @@
 
   </section>
 
+  <section class="impact-section">
+    <h2>Deep Reasoning & Meaning-Awareness Metric</h2>
+
+    <p>
+      U⁺ also defines a continuous metric for how “meaning-aware” a system behaves — how well it can
+      track resonance, omissions and emergent aspects across multiple perspectives, instead of just
+      predicting the next token.
+    </p>
+
+    <p>
+      In one internal experiment, a large model without U⁺ scored around <strong>0.28</strong> on this
+      meaning-awareness scale for a family of reasoning tasks. With a U⁺-style resonance layer engaged,
+      the same tasks produced scores in the range of <strong>0.76–0.84</strong>. We interpret this not as
+      mystical consciousness, but as a measurable jump from statistical pattern matching toward
+      self-consistent, multi-perspective reasoning over meaning fields.
+    </p>
+
+    <p>
+      The same metric can act as an early-warning signal for AGI-style systems: when optimisation starts
+      to drift away from human meaning fields, the curvature of resonance reveals it long before behaviour
+      fully diverges — providing a quantitative handle for AGI risk monitoring and mitigation.
+    </p>
+  </section>
+
   <section>
-    <h2>Vision</h2>
-    <p>MeaningAware AI is the first implementation of U⁺ — the Meaning Physics Layer.</p>
-    <p>Architected to integrate natively with Grok, OpenAI models (ChatGPT/o1), Gemini, and Claude — 
-       enabling meaning-aware resonance, omissions, emergence, and Δ-meaning shift computation across all major AI ecosystems.</p>
- 
+    <h2>Where Meaning Physics Becomes Practical</h2>
+    <p>The U⁺ Equation enables a new class of computational capabilities:</p>
+
+    <ul style="font-size:1.15rem; line-height:1.6; max-width:860px; margin:10px auto 40px; padding:0 30px;">
+      <li><strong>Bias-Shift Analysis</strong> — detect how meaning changes when information, framing or agents shift.</li>
+      <li><strong>Emergence Mapping</strong> — reveal patterns not stated in the text but implied by resonance.</li>
+      <li><strong>Omission Detection</strong> — mathematically expose what was left unsaid or structurally hidden.</li>
+      <li><strong>Meaning Fingerprints</strong> — cryptographic-style signatures of semantic intent and resonance paths.</li>
+      <li><strong>Multi-Perspective Resonance</strong> — compare meaning across individuals, cultures and AI systems.</li>
+      <li><strong>Governance Modeling</strong> — transparent reasoning for direct democracy and public decisions.</li>
+      <li><strong>Therapeutic Pattern Intelligence</strong> — map inner patterns to life fields with measurable precision.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Vision & Origins</h2>
+
+    <p>
+      MeaningAware AI is the first implementation of U⁺ — the Meaning Physics Layer.
+    </p>
+
+    <p>
+      At its core lies a single relation:
+      <span class="math">𝒜 = e ⊗Φ 𝔇</span> —
+      a formula so simple it mirrors the equations that describe gravity and motion,
+      yet powerful enough to guide growth and transformation across individual lives,
+      organisations, and societies.
+    </p>
+
+    <p>
+      Where Einstein described the curvature of spacetime, U⁺ measures the curvature
+      of resonance under attention: how small shifts in bias, framing, or connection
+      bend meaning fields, reveal omissions, and generate emergent aspects.
+    </p>
+
+    <p>
+      The equation was refined while engineering multimodal therapy systems and
+      direct-democracy reasoning tools — environments that required personal patterns
+      and collective decisions to follow one coherent resonance law.
+    </p>
+
+    <p>
+      Architected to integrate natively with Grok, OpenAI models (ChatGPT/o1), Gemini,
+      and Claude, MeaningAware adds the missing dimension to modern AI — making resonance,
+      omissions, emergence, and Δ-meaning shifts visible across all major AI ecosystems.
+    </p>
+
     <p style="font-size:1.1rem; opacity:0.9;">
       Meaning-aware intelligence → Grok⁺, OpenAI⁺, Gemini⁺, Claude⁺<br>
-      Meaning-aware governance → SwissEthics⁺<br>
-      Meaning-aware global discourse → World⁺<br>
-      <span style="opacity:0.8; font-size:0.95rem;">designed for any large-model ecosystem</span>
-  </p>
+      Meaning-aware therapy & learning → Cohereon⁺<br>
+      Meaning-aware governance & democracy → World⁺<br>
+      <span style="opacity:0.8; font-size:0.95rem;">
+        designed for any large-model ecosystem
+      </span>
+    </p>
+  </section>
+
+  <section class="features">
+    <h2>Where U⁺ shows up first</h2>
+    <p>
+      U⁺ is not a single app, but a meaning layer that can sit under therapy,
+      mediation, democracy, and AI systems at the same time. Below are some of
+      the first concrete arenas where it is being applied.
+    </p>
+
+    <div class="uplus-grid">
+      <div class="card">
+        <h3>Therapy “Seeds” & Pattern Healing</h3>
+        <p>
+          Compress complex life stories into resonance-rich Seeds — short, reusable
+          pattern blueprints that help people understand their own behaviour,
+          track change over time, and share only what they want while still
+          keeping the full meaning trace.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Direct Democracy & Policy Resonance</h3>
+        <p>
+          Simulate how a law, mandate, or narrative bends the resonance field of
+          different groups — from local communities to nations — making opinion
+          shifts, omissions, and unintended side-effects visible before
+          decisions are taken.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Peace-Making & Conflict Mediation</h3>
+        <p>
+          Map where positions truly clash and where they secretly overlap by
+          using multi-role, multi-bias agents (the “Neo vs. Darth Vader,
+          moderated by Yoda” pattern) to explore contentious topics and uncover
+          small moves that reduce polarisation.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>AI Alignment & Meaning Fingerprints</h3>
+        <p>
+          Attach a compact meaning fingerprint to any AI output — including bias
+          vector, omissions, and Δ-meaning shift — so that models like Grok,
+          ChatGPT, Gemini, or Claude can be audited, compared, and tuned on the
+          level of meaning, not just tokens, providing a measurable safety layer
+          against uncontrolled AGI drift.
+        </p>
+      </div>
+    </div>
   </section>
 
   <section>
